@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>我の个人空间 | 寧 (Final Beta CN)</title>
+    <title>我の个人空间 | 寧 </title>
     
     <!-- 引入 LeanCloud SDK -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -331,7 +331,7 @@
 
     <header class="hero">
         <div id="bubble-canvas"></div>
-        <h1>欢迎来到<br>宁老师の秘密基地</h1>
+        <h1>欢迎来到<br>茶茶の秘密基地</h1>
         <div class="search-wrapper">
             <div class="search-box-shell" id="searchShell">
                 <input type="text" class="search-input" id="smartInput" placeholder="宁又好奇什么呢？" autocomplete="off">
@@ -453,7 +453,7 @@
         </div>
     </div>
 
-    <footer>Designed by Gemini 3 Pro/Ning Haoyu. Hello World!.</footer>
+    <footer>Designed by Gemini 3 Pro/Mr.Tea. Hello World!.</footer>
 
     <script>
         document.addEventListener("DOMContentLoaded",()=>{
@@ -688,7 +688,7 @@
             container.addEventListener('click', (e) => { const rect = container.getBoundingClientRect(); const pct = (e.clientX - rect.left) / rect.width; if(audio.duration) { audio.currentTime = pct * audio.duration; } });
         }
 
-        const bD=[{t:"Mr.宁 👨‍💻",s:110,x:70,y:30},{t:"摄影+后期📸",s:130,x:20,y:60},{t:"武汉市",s:90,x:50,y:80},{t:"ENFJ",s:80,x:30,y:20},{t:"大学生",s:95,x:60,y:15},{t:"猫猫！🐱",s:85,x:10,y:40}],cvs=document.getElementById('bubble-canvas'),bs=[];bD.forEach(d=>{const e=document.createElement('div');e.className='bubble';e.innerText=d.t;e.style.width=d.s+'px';e.style.height=d.s+'px';cvs.appendChild(e);bs.push({e:e,bx:d.x,by:d.y,cx:0,cy:0});});let ms={x:-9e3,y:-9e3};window.addEventListener('mousemove',e=>{const r=cvs.getBoundingClientRect();ms.x=e.clientX-r.left;ms.y=e.clientY-r.top;});function ab(){const w=cvs.offsetWidth,h=cvs.offsetHeight;bs.forEach(b=>{const tx=(b.bx/100)*w,ty=(b.by/100)*h,dx=ms.x-tx,dy=ms.y-ty,d=Math.sqrt(dx*dx+dy*dy);if(d<200){const a=Math.atan2(dy,dx),f=(200-d)/200;b.cx+=((-Math.cos(a)*f*150)-b.cx)*.1;b.cy+=((-Math.sin(a)*f*150)-b.cy)*.1;}else{b.cx+=(0-b.cx)*.05;b.cy+=(0-b.cy)*.05;}const t=Date.now()/2e3;b.e.style.left=(tx-b.e.offsetWidth/2)+'px';b.e.style.top=(ty-b.e.offsetHeight/2)+'px';b.e.style.transform=`translate(${b.cx+Math.sin(t+b.bx)*10}px,${b.cy+Math.cos(t+b.by)*10}px)`;});requestAnimationFrame(ab);}ab();
+        const bD=[{t:"Mr.茶 👨‍💻",s:110,x:70,y:30},{t:"摄影+后期📸",s:130,x:20,y:60},{t:"武汉市",s:90,x:50,y:80},{t:"ENFJ",s:80,x:30,y:20},{t:"大学生",s:95,x:60,y:15},{t:"猫猫！🐱",s:85,x:10,y:40}],cvs=document.getElementById('bubble-canvas'),bs=[];bD.forEach(d=>{const e=document.createElement('div');e.className='bubble';e.innerText=d.t;e.style.width=d.s+'px';e.style.height=d.s+'px';cvs.appendChild(e);bs.push({e:e,bx:d.x,by:d.y,cx:0,cy:0});});let ms={x:-9e3,y:-9e3};window.addEventListener('mousemove',e=>{const r=cvs.getBoundingClientRect();ms.x=e.clientX-r.left;ms.y=e.clientY-r.top;});function ab(){const w=cvs.offsetWidth,h=cvs.offsetHeight;bs.forEach(b=>{const tx=(b.bx/100)*w,ty=(b.by/100)*h,dx=ms.x-tx,dy=ms.y-ty,d=Math.sqrt(dx*dx+dy*dy);if(d<200){const a=Math.atan2(dy,dx),f=(200-d)/200;b.cx+=((-Math.cos(a)*f*150)-b.cx)*.1;b.cy+=((-Math.sin(a)*f*150)-b.cy)*.1;}else{b.cx+=(0-b.cx)*.05;b.cy+=(0-b.cy)*.05;}const t=Date.now()/2e3;b.e.style.left=(tx-b.e.offsetWidth/2)+'px';b.e.style.top=(ty-b.e.offsetHeight/2)+'px';b.e.style.transform=`translate(${b.cx+Math.sin(t+b.bx)*10}px,${b.cy+Math.cos(t+b.by)*10}px)`;});requestAnimationFrame(ab);}ab();
         
         const trk=document.getElementById('track');ws.forEach(s=>{const w=document.createElement('div');w.className='web-card-wrapper';w.innerHTML=`<div class="web-card-inner"><div class="card-icon">${s.icon}</div><div><div class="card-title">${s.name}</div><div class="card-desc">${s.desc}</div></div><a href="${s.url}" target="_blank" class="card-btn" onmousedown="event.stopPropagation()" ontouchstart="event.stopPropagation()">Visit</a></div>`;trk.appendChild(w);});
         
